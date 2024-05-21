@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/hi', (req, res) => {
-    res.send('Hello World from NodeApp! docker is cool! update');
+    res.send('Hello World from NodeApp!');
     }
 );
 
