@@ -4,11 +4,11 @@ steps:
     args: ['build', '-t', 'gcr.io/my-first-project-398416/nodebuild', '.']
     
     
-  # Step 3: Push the Docker image to Google Container Registry
+  # Step 2: Push the Docker image to Google Container Registry
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/my-first-project-398416/nodebuild']
     
-  # Step 4: Deploy to Cloud Run
+  # Step 3: Deploy to Cloud Run
   - name: 'gcr.io/cloud-builders/gcloud'
     args: ['beta', 'run', 'deploy', 'nodebuild', '--image', 'gcr.io/my-first-project-398416/nodebuild', '--platform', 'managed', '--region', 'us-central1']
     env:
